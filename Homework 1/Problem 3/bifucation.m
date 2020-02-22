@@ -6,7 +6,7 @@ clear all;
 close all;
 
 xvals = []; 
-for alpha = 0: 0.01: 4
+for alpha = 0: 0.005:4
     xold = 0.5; 
     for i = 1:2000
         xnew = ((xold - xold.^2).*alpha);
@@ -27,4 +27,8 @@ for alpha = 0: 0.01: 4
     end
 end
 
-plot(xvals(1,:), xvals(2,:), '.', 'LineWidth', 0.1, 'MarkerSize', 1.2);
+plot(xvals(1,:), xvals(2,:), '.', 'LineWidth', 0.1, 'MarkerSize', 1);
+set(gcf,'color','w');
+set(gca,'linewidth',1.5)
+xlabel('\alpha');
+title('Bifurcation Diagram for Logistic Map');
