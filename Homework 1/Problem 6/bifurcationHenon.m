@@ -5,8 +5,8 @@ clear all;
 close all;
 
 xvals = []; 
-beta = 0.4;
-for alpha = 0: 0.005:1.25
+beta = -0.5;
+for alpha = -2: 0.001:0
     z = [0,0]; 
     for i = 1:2000
         zNew = henon(z(1), z(2), alpha, beta);
