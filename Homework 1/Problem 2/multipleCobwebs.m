@@ -6,9 +6,9 @@
 close all 
 clear all
 
-z = linspace(0,1,10); 
+z = [0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 ]; 
 lengthZ = length(z);
 
 for i = 1: lengthZ 
-    cobweb(@graphFunction, 0,1, z(i), 50, i, lengthZ);
+    cobweb(@graphFunction, 0,1, z(i), 100, i, lengthZ);
 end

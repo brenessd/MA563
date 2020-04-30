@@ -1,6 +1,18 @@
 function cobweb(f, a, b, x0, N, i, z)
     x = linspace(a,b, N); 
     y = f(x);
+    
+%     y = [];
+%     
+%     lengthX = length(x);
+%     for j = 1: lengthX
+%         x1 = x(j);
+%         if x1 < 1/2
+%            y= [y 2*x1];
+%         else
+%            y= [y 2*(1-x1)];
+%         end
+%     end
   
     figure(i)
     
@@ -10,7 +22,7 @@ function cobweb(f, a, b, x0, N, i, z)
     
     xlabel('x_n');
     ylabel('x_{n+1}');
-    title('Cobweb for Logistic Map');
+    title('Cobweb for Tent Map');
     
     x(1) = x0;
     line([x(1),x(1)], [0, f(x(1))], 'LineWidth', 1.25);
